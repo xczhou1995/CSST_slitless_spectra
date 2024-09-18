@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import argparse
 from scipy.stats import norm
 from scipy.optimize import bisect
+import os
 
 parser = argparse.ArgumentParser()
 
@@ -11,6 +12,8 @@ parser.add_argument('--result_file', type=str)
 args = parser.parse_args()
 
 result_file = args.result_file
+
+result_dir = '/'.join(result_file.split('/')[:-1])
 
 result = np.load(result_file)
 
@@ -150,7 +153,8 @@ plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 plt.xlim(0, 1.0)
 plt.ylim(0, 1.0)
-plt.savefig('Calibration.png')
+figname = os.path.join(result_dir, 'Calibration.png')
+plt.savefig(figname)
 
 def sigma(z_pred, z_spec):
     del_z = z_pred - z_spec
@@ -192,8 +196,9 @@ plt.text(0.2, 1.12, r'$\eta$ = ' + str(eta_tot) + '%', fontsize=16)
 plt.text(0.2, 1.04, r'$\overline{E}$ = ' + str(err_tot), fontsize=16)
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-plt.savefig('result_after_calibration.png')
+figname = os.path.join(result_dir, 'result_after_calibration.png')
+plt.savefig(figname)
 
-np.savez_compressed('result_calibrated.npz', z_true=z_true_total,
+filename = os.path.join(result_dir, 'result_calibrated.npz')
+np.savez_compressed(filename, z_true=z_true_total,
                     z_pred=np.column_stack((z_pred_total, z_errs_total_cal)))
-

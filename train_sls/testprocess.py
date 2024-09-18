@@ -133,7 +133,7 @@ def qq_plot(z_true, mubar, std, base_dir):
     plt.xlabel('Confidence interval')
     plt.ylabel('Coverage probability')
 
-    figname = 'q_q_'
+    figname = 'q_q'
 
     filename = os.path.join(base_dir, figname)
     plt.savefig(filename)
@@ -183,7 +183,7 @@ def prediction_bnn(test_data, test_label, base_dir, model, saved_weights, n_runs
 
     std = np.sqrt(stdsquare)
 
-    data_name = 'result_'
+    data_name = 'result'
 
     filename = os.path.join(base_dir, data_name)
 
