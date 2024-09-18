@@ -20,7 +20,8 @@ The CSST slitless spectra dataset used for training, validation and testing of o
 
 `matplotlib` 
 
-Our codes are run on tensorflow versions as follows
+Our codes are run on tensorflow versions as follows:
+
 `tensorflow==2.8.0`
 
 `tensorflow-probability==0.16.0`
