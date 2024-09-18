@@ -9,6 +9,18 @@ The CSST slitless spectra dataset used for training, validation and testing of o
 
 ## Usage
 
+### Dependence
+`numpy`
+`pandas`
+`scipy`
+`joblib`
+`matplotlib`
+Our codes are run on tensorflow versions as follows
+`tensorflow==2.8.0`
+`tensorflow-probability==0.16.0`
+`keras==2.8.0`
+Modifications are possibly needed if use other versions. 
+
 ### CNN backbone
 `python train_sls.py --model_type=CNN --batch_size=1024 --epochs=100 --augmentation --num_augments=50`
 where `--augmentation` means augment data using Gaussian realizations and `num_augments` is the number of augmented data.
@@ -21,3 +33,4 @@ If you want to train the BNN from scratch, just delete the `--transfer`.
 
 ## Calibration
 `python calibration.py --result_file=BNN_1d/result.npz`
+
