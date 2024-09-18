@@ -11,14 +11,22 @@ The CSST slitless spectra dataset used for training, validation and testing of o
 
 ### Dependence
 `numpy`
-`pandas`
-`scipy`
-`joblib`
-`matplotlib`
+
+`pandas` 
+
+`scipy` 
+
+`joblib` 
+
+`matplotlib` 
+
 Our codes are run on tensorflow versions as follows
 `tensorflow==2.8.0`
+
 `tensorflow-probability==0.16.0`
+
 `keras==2.8.0`
+
 Modifications are possibly needed if use other versions. 
 
 ### CNN backbone
