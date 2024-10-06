@@ -42,6 +42,8 @@ where `n_runs` indicates the number of runs when feeding testing data to BNN and
 
 If you want to train the BNN from scratch, just delete the `--transfer`.
 
+A <div style="text-align: right"> Beijing, China </div>
+
 ## Calibration
 `python calibration.py --result_file=BNN_1d/result.npz`
 
