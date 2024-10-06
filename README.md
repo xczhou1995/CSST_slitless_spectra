@@ -45,4 +45,4 @@ If you want to train the BNN from scratch, just delete the `--transfer`.
 ## Calibration
 `python calibration.py --result_file=BNN_1d/result.npz`
 
-<p align="right">text</p>
+
