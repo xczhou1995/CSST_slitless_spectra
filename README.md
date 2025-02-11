@@ -1,5 +1,7 @@
 # CSST slitless spectra
-Relevant codes for "Accurately Estimating Redshifts from CSST Slitless Spectroscopic Survey using Deep Learning" at [arXiv:2407.13991](https://arxiv.org/abs/2407.13991).
+Relevant codes for "Accurately Estimating Redshifts from CSST Slitless Spectroscopic Survey using Deep Learning".
+
+Paper link: https://iopscience.iop.org/article/10.3847/1538-4357/ad8bbf
 
 ## Slitless spectra simulation software
 The codes for this software is publicly available at [here](https://csst-tb.bao.ac.cn/code/zhangxin/sls_1d_spec)
